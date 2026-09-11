@@ -1,0 +1,94 @@
+\documentclass[a4paper]{article}
+
+\input{layout}
+
+\IfFontExistsTF{Arial}
+  {\setmainfont{Arial}}
+  {\setmainfont{Liberation Sans}}
+
+\newfontfamily\cjkfont{Heiti TC}
+
+\begin{document}
+\fontsize{10}{13}\selectfont
+
+\begin{minipage}[t]{280pt}
+  \vspace{0pt}
+  {\fontsize{22}{22}\selectfont Alex Su ({\cjkfont 蘇奕幃})}\par
+  \vspace{15.5pt}
+  {\fontsize{11}{15}\selectfont
+   \edu{B.M.S., Industrial and Information Management,}{\textbf{National Cheng Kung University}, 2020 - 2024}}
+\end{minipage}%
+\begin{minipage}[t]{258pt}
+  \vspace{0pt}
+  {\fontsize{11}{18.5}\selectfont
+   \contact{email}{yiwei.suuu@gmail.com}
+   \contact{phone}{(+886) 966-198-609}
+   \contact{linkedin}{\plink{https://www.linkedin.com/in/yi-wei-su/}{linkedin.com/in/yi-wei-su}}
+   \contact{github}{\plink{https://github.com/yeeway0609}{github.com/yeeway0609}}}
+\end{minipage}
+
+\vspace{1.5pt}
+
+\cvsection{Summary}
+
+\begin{itemize}
+  \item Full-stack engineer who ships products \kw{end to end}, across both B2C and B2B.
+  \item Focused on the \kw{application layer of AI products} (OCR, speech-to-text, RAG) with an agent-native workflow.
+  \item \kw{Led a developer community} and contributed to open source; enjoys sharing knowledge and improving team workflows.
+\end{itemize}
+
+\cvsection{Work Experience}
+
+\cvtitle{Software Engineer - \blink{https://ardge.com/}{ARDGE Inc.}, 2025.09 - Present}
+\techstack{Claude Code/Go/Python/Vue/React/Tauri/Docker/Whisper/PaddleOCR}
+\begin{itemize}
+  \item Agent-native engineering: \kw{80\%+} of daily output produced with AI agents such as Claude Code under a Harness Engineering workflow; built a Hermes agent with a Microsoft Teams bot, now used daily by 20+ colleagues.
+  \item Redesigned the speech-to-text audio pipeline: uploads are streamed to disk, split at silence points and transcribed in parallel, then merged by timestamp, \kw{eliminating out-of-memory failures} on hour-long recordings.
+  \item Made AI products scriptable: revocable API keys with permission control, a cross-platform CLI and an MCP server, so \kw{scripts and AI agents can drive the product without a browser}.
+  \item Built an \kw{embeddable AI chat assistant} for an on-premise RAG knowledge-base product: visitors ask without logging in, styling stays isolated from the host site, admins customise the look, with mobile layout and connection-failure handling.
+  \item Full-stack delivery: shipped \kw{multiple Web products from zero to launch}, plus Mobile and Desktop apps in React Native and Tauri.
+\end{itemize}
+
+\cvtitle{Frontend Engineer Intern - \blink{https://www.boring-lab.com/}{BORING Design Lab}, 2024.07 - 2025.03}
+\techstack{React/Next.js/Angular/TypeScript/Tailwind CSS/Firebase/three.js/GenAI}
+\begin{itemize}
+  \item Built a GenAI-powered \ulink{https://www.boring-lab.com/work/tai-xin-yin-xing-2024jin-rong}{personality quiz app} that generated questions in real time, classified visitors' personality types and recommended matching financial products, drawing \kw{10,000+ participants in a single day}.
+  \item Built the \ulink{https://richartlife.taishinbank.com.tw/redeem}{points redemption interface} for Taishin Bank's Richart site (\kw{3.9M+} users), with real-time input validation and error feedback.
+  \item Built the \ulink{https://www.boring-lab.com/work/starluxtw-thewarmthoftaiwan}{core card-drawing experience} of STARLUX Airlines' ``Warmth of Taiwan'' site in \kw{Three.js (React Three Fiber)}: a 3D card carousel with custom video shaders and choreographed camera and transition animation.
+\end{itemize}
+
+\cvsection{Side Projects / Open Source}
+
+\cvtitle{OpenCLI (Open Source Contribution)}
+\techstack{JavaScript/Node.js}
+\begin{itemize}
+  \item A 29k+ star open-source tool that turns any website into a CLI (command-line tool) for AI agents to operate.
+  \item Implemented the complete \kw{Pinterest adapter}: search, image and board create/update/delete and download, with input validation and explicit confirmation for destructive operations.
+  \item \ulink{https://github.com/jackwener/OpenCLI/pull/2177}{github.com/jackwener/OpenCLI/pull/2177}
+\end{itemize}
+
+\cvtitle{NCKU Bike Festival Website}
+\techstack{Vue/Tailwind CSS/LINE API}
+\begin{itemize}
+  \item Integrated LINE Login and notifications to unify event info, lifting LINE account engagement \kw{300\%+}.
+  \item \ulink{https://github.com/gdsc-ncku/BikeFestival17th-Frontend}{github.com/gdsc-ncku/BikeFestival17th-Frontend}
+\end{itemize}
+
+\cvsection{Volunteer Experience}
+
+\cvtitle{Leader and Frontend Developer - \blink{https://gdg.community.dev/gdg-on-campus-national-cheng-kung-university-tainan-city-taiwan/}{GDG on Campus NCKU}, 2023.07 - 2024.06}
+\begin{itemize}
+  \item Founded and led a Google-supported developer community, growing it to \kw{50+} active members.
+  \item Hosted a \kw{300+} attendee demo day and built the \ulink{https://github.com/gdsc-ncku/gdsc-ncku-forum-2024}{event website}; presented on stage and ran live Q\&A.
+\end{itemize}
+
+\cvsection{Certificate \& Awards}
+
+\vspace{0pt}
+
+\begin{itemize}
+  \item TOEIC - 905 (2025.06)
+  \item Taipei Metro Hackathon - 4th Place (2025.08)
+\end{itemize}
+
+\end{document}

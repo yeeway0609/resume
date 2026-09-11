@@ -1,0 +1,94 @@
+\usepackage[top=0.5cm,bottom=0.5cm,left=1cm,right=1cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[normalem]{ulem}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\definecolor{linkblue}{HTML}{1155CC}
+\definecolor{techgrey}{HTML}{666666}
+\definecolor{rulegrey}{HTML}{888888}
+
+\newcommand{\plink}[2]{\href{#1}{\textcolor{linkblue}{#2}}}
+\newcommand{\blink}[2]{\href{#1}{\textcolor{linkblue}{\textbf{#2}}}}
+\renewcommand{\ULthickness}{0.4pt}
+\setlength{\ULdepth}{1.2pt}
+\newcommand{\kw}[1]{\textbf{#1}}
+\newcommand{\ulink}[2]{\href{#1}{\textcolor{linkblue}{\uline{#2}}}}
+
+\graphicspath{{icons/}}
+
+\newcommand{\seticonheight}[2]{\expandafter\def\csname iconheight@#1\endcsname{#2}}
+\seticonheight{graduation-cap}{9pt}
+\seticonheight{email}{8pt}
+\seticonheight{phone}{10pt}
+\seticonheight{linkedin}{10pt}
+\seticonheight{github}{10pt}
+
+\newcommand{\icon}[1]{%
+  \raisebox{\dimexpr0.5ex-0.5\height\relax}{%
+    \includegraphics[height=\csname iconheight@#1\endcsname]{#1}}%
+}
+
+\newlength{\eduiconraise}
+\setlength{\eduiconraise}{1pt}
+\newlength{\eduindent}
+\setlength{\eduindent}{16pt}
+
+\newcommand{\edu}[2]{%
+  \hspace*{1pt}\makebox[15pt][l]{\raisebox{\eduiconraise}{\icon{graduation-cap}}}#1\par
+  \hspace*{\eduindent}#2\par
+}
+
+\newlength{\contactindent}
+\setlength{\contactindent}{10pt}
+
+\newcommand{\contact}[2]{%
+  \hspace*{\contactindent}\makebox[15pt][l]{\icon{#1}}#2\par
+}
+
+\newlength{\cvsectiontop}
+\setlength{\cvsectiontop}{18pt}
+
+\newcommand{\cvsection}[1]{%
+  \par\vspace{\cvsectiontop}%
+  \hspace*{3pt}%
+  \rlap{\raisebox{-10pt}[0pt][0pt]{\textcolor{rulegrey}{\rule{\dimexpr\linewidth-3pt\relax}{1pt}}}}%
+  {\fontsize{12}{12}\selectfont\bfseries #1}\par
+  \vspace{11pt}%
+  \global\aftersectiontrue%
+}
+
+\newif\ifaftersection
+\newlength{\cvtitletop}
+\setlength{\cvtitletop}{7pt}
+\newlength{\cvtitletopfirst}
+\setlength{\cvtitletopfirst}{0pt}
+
+\newcommand{\cvtitle}[1]{%
+  \par\ifaftersection\vspace{\cvtitletopfirst}\global\aftersectionfalse\else\vspace{\cvtitletop}\fi%
+  \hspace*{3pt}{\fontsize{11}{11}\selectfont\bfseries #1}\par
+  \vspace{0pt}%
+}
+
+\newcommand{\techstack}[1]{%
+  \hspace*{3pt}{\color{techgrey}#1}\par
+  \vspace{2pt}%
+}
+
+\setlist[itemize]{
+  leftmargin=20pt,
+  labelindent=7pt,
+  labelwidth=8pt,
+  labelsep=5pt,
+  align=left,
+  topsep=0pt,
+  partopsep=0pt,
+  parsep=0pt,
+  itemsep=0pt,
+  label={\fontsize{9}{9}\selectfont ●}
+}

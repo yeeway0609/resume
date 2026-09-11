@@ -1,0 +1,99 @@
+\documentclass[a4paper]{article}
+
+\input{layout}
+
+\usepackage{xeCJK}
+\usepackage{xeCJKfntef}
+
+\IfFontExistsTF{Arial}
+  {\setmainfont{Arial}}
+  {\setmainfont{Liberation Sans}}
+
+\setCJKmainfont{Heiti TC}[BoldFont={Heiti TC Medium}]
+
+\renewcommand{\ulink}[2]{\href{#1}{\textcolor{linkblue}{\CJKunderline{#2}}}}
+
+\begin{document}
+\fontsize{10}{13}\selectfont
+
+\begin{minipage}[t]{280pt}
+  \vspace{0pt}
+  {\fontsize{22}{22}\selectfont 蘇奕幃 (Alex Su)}\par
+  \vspace{15.5pt}
+  {\fontsize{11}{15}\selectfont
+   \edu{工業與資訊管理學系}{\textbf{國立成功大學}，2020 - 2024}}
+\end{minipage}%
+\begin{minipage}[t]{258pt}
+  \vspace{0pt}
+  {\fontsize{11}{18.5}\selectfont
+   \contact{email}{yiwei.suuu@gmail.com}
+   \contact{phone}{(+886) 966-198-609}
+   \contact{linkedin}{\plink{https://www.linkedin.com/in/yi-wei-su/}{linkedin.com/in/yi-wei-su}}
+   \contact{github}{\plink{https://github.com/yeeway0609}{github.com/yeeway0609}}}
+\end{minipage}
+
+\vspace{1.5pt}
+
+\cvsection{簡介}
+
+\begin{itemize}
+  \item 以 Web 為主的全端工程師，具備\kw{從零到上線的完整交付經驗}，並延伸至行動與桌面應用；B2C 與 B2B 場景皆有涉獵。
+  \item 專長為 \kw{AI 應用落地}與 Agent-native 開發流程，在 OCR、語音轉文字、RAG 知識庫等產品上開發面向使用者的功能。
+  \item \kw{領導過開發者社群}並參與過開源貢獻，樂於分享技術新知與優化團隊協作流程。
+\end{itemize}
+
+\cvsection{工作經歷}
+
+\cvtitle{軟體工程師 - \blink{https://ardge.com/}{ARDGE 開端智能}，2025.09 - 現在}
+\techstack{Claude Code/Go/Python/Vue/React/Tauri/Docker/Whisper/PaddleOCR}
+\begin{itemize}
+  \item Agent-native 實戰經驗：日常開發 \kw{80\%+} 產出搭配 Claude Code 等 AI agent 完成，落實 Harness Engineering 工作流，並架設 Hermes agent 與串接 Microsoft Teams bot，導入部門讓 20+ 位同仁日常使用。
+  \item 重新設計語音轉文字服務的音訊處理流程：上傳檔以串流方式暫存並在靜音點切塊，平行轉錄後依時間戳合併，\kw{解決大檔記憶體不足的問題}，讓小時級長音訊可穩定轉錄。
+  \item 讓 AI 產品可被程式化操作：可撤銷、帶權限控制的 API 金鑰、跨平台 CLI 與 MCP server，讓\kw{腳本與 AI agent 不經瀏覽器即可操作產品}。
+  \item 為地端 RAG 知識庫產品打造\kw{可嵌入客戶網站的 AI 聊天助理}：訪客無需登入即可問答，樣式與客戶網站完全隔離，後台可自訂外觀，並支援手機版面與連線異常處理。
+  \item 全端開發交付能力：獨立完成\kw{多個 Web 產品從零到上線}，並以 React Native、Tauri 實作行動端與桌機應用。
+\end{itemize}
+
+\cvtitle{前端工程師實習生 - \blink{https://www.boring-lab.com/}{BORING Design Lab}，2024.07 - 2025.03}
+\techstack{React/Next.js/Angular/TypeScript/Tailwind CSS/Firebase/three.js/GenAI}
+\begin{itemize}
+  \item 運用生成式 AI 技術打造\ulink{https://www.boring-lab.com/work/tai-xin-yin-xing-2024jin-rong}{心理測驗 App}，即時生成隨機題目、判斷參展者人格類型並輸出推薦金融產品，\kw{單日吸引 10,000+ 名參加者}互動。
+  \item 開發台新銀行 Richart 網站的\ulink{https://richartlife.taishinbank.com.tw/redeem}{點數兌換介面}，實作即時輸入驗證與錯誤提示，面向 \kw{390 萬+} 數位帳戶用戶。
+  \item 以 \kw{Three.js（React Three Fiber）}打造星宇航空台灣溫度互動網站的\ulink{https://www.boring-lab.com/work/starluxtw-thewarmthoftaiwan}{核心抽卡體驗}：訪客從 3D 卡牌輪盤抽選三張台灣風景卡，卡面以自訂 shader 播放影片，並隨選取推進鏡頭與轉場動畫，最終得到個人化的台灣溫度。
+\end{itemize}
+
+\cvsection{個人專案/開源貢獻}
+
+\cvtitle{OpenCLI（開源貢獻）}
+\techstack{JavaScript/Node.js}
+\begin{itemize}
+  \item 29k+ star 的開源工具，把任意網站包成 CLI（命令列工具），讓 AI agent 能透過使用者已登入的瀏覽器操作網站。
+  \item 實作完整的 \kw{Pinterest adapter}：涵蓋搜尋、圖片與收藏板的建立／更新／刪除與下載，含輸入驗證，刪除類操作需明確確認才執行。
+  \item \ulink{https://github.com/jackwener/OpenCLI/pull/2177}{github.com/jackwener/OpenCLI/pull/2177}
+\end{itemize}
+
+\cvtitle{成大單車節 官方網站}
+\techstack{Vue/Tailwind CSS/LINE API}
+\begin{itemize}
+  \item 整合 LINE Login 並實作通知功能，解決活動資訊分散的問題，使 LINE 官方帳號的互動與觸及成長超過 \kw{300\%}。
+  \item \ulink{https://github.com/gdsc-ncku/BikeFestival17th-Frontend}{github.com/gdsc-ncku/BikeFestival17th-Frontend}
+\end{itemize}
+
+\cvsection{志工經歷}
+
+\cvtitle{社群領袖 - \blink{https://gdg.community.dev/gdg-on-campus-national-cheng-kung-university-tainan-city-taiwan/}{GDG on Campus NCKU}，2023.07 - 2024.06}
+\begin{itemize}
+  \item 創立並帶領由 Google 支持的開發者社群，成長至 \kw{50+} 活躍成員。
+  \item 主辦 \kw{300+} 人參與的 demo day 並建置\ulink{https://github.com/gdsc-ncku/gdsc-ncku-forum-2024}{活動官網}——具備對數百人規模場合進行技術簡報與活動籌辦的實績。
+\end{itemize}
+
+\cvsection{證照與獎項}
+
+\vspace{0pt}
+
+\begin{itemize}
+  \item 多益 TOEIC - 905（2025.06）
+  \item 臺北捷運黑客松 - 第四名（2025.08）
+\end{itemize}
+
+\end{document}
